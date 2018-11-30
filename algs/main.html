@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../lib/organizertrainer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="organizer">
+        <div id="gray" class="overlay"></div>
+        <div id="editbox" class="overlay">
+            <div id="editbox-image"></div>
+            <div id="editbox-text"></div>
+            <div id="editbox-list"></div>
+            <div id="editbox-submit"></div>
+        </div>
+        <span id="trainerButtonOrganizer" class="link">Trainer &raquo;</span>
+        <span id="optionsButtonOrganizer" class="link">Options</span>
+        <div id="options">
+            Click on a case's image to toggle its status.
+            <h1>Display:</h1>
+            <li><input type="checkbox" name="showTriggers">Show triggers in algorithms</li>
+            <li><input type="checkbox" name="activeToTop">Keep <span class="active">Active</span> cases at the top</li>
+            <li><input type="checkbox" name="finishedToBottom">Keep <span class="finished">Finished</span> cases at the bottom</li>
+            <h1>Trainer:</h1>
+            <li><input type="checkbox" name="trainOnInactive">Use <span class="inactive">Inactive</span> cases</li>
+            <li><input type="checkbox" name="trainOnActive">Use <span class="active">Active</span> cases</li>
+            <li><input type="checkbox" name="trainOnFinished">Use <span class="finished">Finished</span> cases</li>
+            <h1>Restore Defaults:</h1>
+            <span class="link" id="resetAlgs">Reset Algs</span><br />
+            <span class="link" id="resetSettings">Reset Settings</span>
+        </div>
+        <button onclick="localStorage.clear();location.reload();" style="position:fixed;bottom:10px;right:10px;z-index:30;">PURGE!</button>
+        <div id="table_container"></div>
+    </div>
+
+    <div id="trainer">
+        <div>
+            <span id="organizerButtonTrainer" class="link">&laquo; Algorithms</span>
+        </div>
+        <table id="timertable" border="1">
+            <tr>
+                <td id="scrambletd" colspan="3">
+                    <div id="scrambleTop">
+                        <span id="scramble"></span>
+                    </div>
+                    <div id="scrambleBottom">
+                        <span id="prevScrambleButton" class="scrambleButton link">last</span>
+                        <span class="scrambleButton">/</span>
+                        <span id="currentScrambleButton" class="scrambleButton link">current</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="timertd">0.00</td>
+                <td id="timerlisttd">
+                    <div id="timerlist"></div>
+                </td>
+                <td id="timermisctd">
+                    <div id="deleteButtons">
+                        <span id="resetButtonTrainer" class="link">Reset</span>
+                        <span id="deleteButtonTrainer" class="link">Delete</span>
+                    </div>
+                    <div id="hint">
+                        <div class="misc-header"></div>
+                        <div class="misc-image"></div>
+                        <div class="misc-text"></div>
+                        <div class="misc-button"></div>
+                    </div>
+                    <div id="showCase">
+                        <div class="misc-header"></div>
+                        <div class="misc-image"></div>
+                        <div class="misc-text"></div>
+                        <div class="misc-button"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../lib/algdata.js"></script>
+    <script src="../lib/organizertrainer.js"></script>
+</body>
+</html>

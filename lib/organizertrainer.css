@@ -1,0 +1,182 @@
+html, body {
+    font-family: sans-serif;
+}
+.link:hover {
+    cursor: pointer;
+}
+#organizer, #trainer {
+    text-align: center;
+}
+#trainer {
+    height: 100%;
+    display: none;
+}
+#organizer div, #organizer table, #trainer div, #trainer table, td {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+#table td {
+    position: relative;
+}
+img.case {
+    width: 7em;
+    height: 7em;
+}
+#editbox {
+    display: none;
+    background-color: rgb(240, 240, 240);
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    left: 20%;
+    z-index: 200;
+    padding: 2% 0 5% 0;
+    border-radius: 20px;
+}
+#editbox-image img {
+    width: 100px;
+    height: 100px;
+}
+#editbox-text {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 0 2% 0;
+}
+#editbox-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+#editbox-list li {
+    display: block;
+    border: 1px solid #000;
+    text-align: center;
+    background-color: white;
+    margin: -1px 0 0 0;
+}
+#organizer #options {
+    display: none;
+    position: fixed;
+    list-style-type: none;
+    text-align: left;
+    margin: 30px 0 0 0;
+    background-color: white;
+    width: fit-content;
+    z-index: 1000;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 6px;
+}
+#options h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+    padding: 0;
+}
+#editbox-list input#custom {
+    width: 100%;
+    text-align: center;
+    border: 0;
+}
+.edit-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#gray {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 150;
+    width: 200%;
+    height: 200%;
+    position: fixed;
+    left: -50%;
+    top: -50%;
+}
+#timertable {
+    width: 100%;
+    margin: 10px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+#timertable td {
+    padding: 3px;
+    border: 1px solid #000;
+}
+#timertd {
+    text-align: center;
+    font-size: 8em;
+    font-weight: bold;
+    font-family: Arial;
+}
+#scrambletd {
+    font-size: 2em;
+    height: 10%;
+}
+#timerlisttd {
+    font-size: 1.1em;
+    text-align: left;
+    vertical-align: top;
+    width: 250px;
+}
+#timertable #timermisctd {
+    vertical-align: top;
+    font-size: 1.2em;
+    width: 250px;
+}
+.misc-header {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.misc-text {
+    font-size: 0.9em;
+}
+.misc-image {
+    width: 120px;
+}
+.scrambleButton {
+    font-size: 0.8em;
+}
+#timertable #timerlist {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow-y: scroll;
+    height: 18em;
+}
+#organizerButtonTrainer {
+    float: left;
+    font-weight: bold;
+}
+#deleteButtons {
+    height: 2em;
+}
+#resetButtonTrainer {
+    float: left;
+}
+#deleteButtonTrainer {
+    float: right;
+}
+#trainerButtonOrganizer {
+    font-weight: bold;
+    position: fixed;
+    right: 10px;
+    z-index: 30;
+}
+#optionsButtonOrganizer {
+    font-weight: bold;
+    position: fixed;
+    left: 10px;
+    z-index: 30;
+}
+.editButton {
+    height: 25px;
+    width: 25px;
+}

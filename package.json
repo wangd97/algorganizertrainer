@@ -1,0 +1,19 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.html",
+  "scripts": {
+    "build": "babel src --out-dir lib & uglifyjs lib/algdata.js --compress --mangle -o lib/algdata.js & uglifyjs lib/organizertrainer.js --compress --mangle -o lib/organizertrainer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browserify": "^16.2.3",
+    "cubejs": "^1.3.1",
+    "uglify-js": "^3.4.9"
+  }
+}
